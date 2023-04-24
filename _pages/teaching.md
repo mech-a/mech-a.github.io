@@ -7,6 +7,7 @@ nav: true
 nav_order: 5
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
+In Spring of 2023, I was a uGSI (Berkeley-dialect for TA) for CS 70: Discrete Mathematics and Probability Theory, a course of ~500 students per semester. I held discussion and office hours for the course.
 
-Organize your courses by years, topics, or universities, however you like!
+Some sample mini-lectures can be found [here](https://drive.google.com/drive/folders/1rammnz6rpDes94JXGDCBpnoSIOT7GKvU?usp=sharing).
+
