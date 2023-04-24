@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: EECS & Business at <a href='https://met.berkeley.edu/'>UC Berkeley Management, Entrepreneurship, and Technology Program</a>. Interested in managing tangible technology; robots, digital products, and more. # <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: Hi! I'm a junior majoring in EECS & Business at <a href='https://met.berkeley.edu/'>UC Berkeley Management, Entrepreneurship, and Technology Program</a>. I'm interested in managing tangible technology; robots, digital products, and more. # <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
 
 profile:
   align: right

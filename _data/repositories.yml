@@ -1,12 +1,7 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - mech-a
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - Kutils-Developers/KutilsDiscordBot
+  - Berkeley-Integrative-Arts-Collective/RVSpotifyComparison
+  - mech-a/fratbot-ee106a-fa22
