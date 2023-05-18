@@ -10,10 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>A long announcement with details | Gaurav  Bhatnagar</title>
+    <title>PintOS | Gaurav  Bhatnagar</title>
     <meta name="author" content="Gaurav  Bhatnagar">
-    <meta name="description" content="Gaurav Bhatnagar's (gbhatnagar@berkeley.edu) homepage
-">
+    <meta name="description" content="Implementing filesystems, user threads, and program invocation in a Linux-like x86 OS.">
     <meta name="keywords" content="gaurav, bhatnagar, gauravbhatnagar, gbhatnagar, berkeley, met, ucb">
 
 
@@ -24,7 +23,7 @@
     <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Slab:100,300,400,500,700%7CMaterial+Icons">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
 
     <!-- Code Syntax Highlighting -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
@@ -34,7 +33,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://gbhat.net/news/announcement_2/">
+    <link rel="canonical" href="https://gbhat.net/projects/pintos/">
     
     <!-- Dark Mode -->
     
@@ -111,56 +110,45 @@
 
     <!-- Content -->
     <div class="container mt-5">
-      <!-- _layouts/post.html -->
+      <!-- page.html -->
+        <div class="post">
 
-<div class="post">
+          <header class="post-header">
+            <h1 class="post-title">PintOS</h1>
+            <p class="post-description">Implementing filesystems, user threads, and program invocation in a Linux-like x86 OS.</p>
+          </header>
 
-  <header class="post-header">
-    <h1 class="post-title">A long announcement with details</h1>
-    <p class="post-meta">November 7, 2015</p>
-    <p class="post-tags">
-      <a href="/blog/2015"> <i class="fas fa-calendar fa-sm"></i> 2015 </a>
+          <article>
+            <p><em>Project timeline: February 2023 to May 2023</em></p>
 
-    </p>
-  </header>
+<p>During my Spring 2023 semester at UC Berkeley, I took <a href="https://cs162.org/" rel="external nofollow noopener" target="_blank">CS 162: Operating Systems and Systems Programming</a>. We designed and implemented many interesting things – a shell supporting program execution, path resolution, signal redirection, pipes, and more in C and an implementation of the coordinator of MapReduce in Rust were some stand-out examples.</p>
 
-  <article class="post-content">
-    <p>Announcements and news can be much longer than just quick inline posts. In fact, they can have all the features available for the standard blog posts. See below.</p>
-
-<hr>
-
-<p>Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptown vinyl kitsch. Four loko meh 8-bit, tousled banh mi tilde forage Schlitz dreamcatcher twee 3 wolf moon. Chambray asymmetrical paleo salvia, sartorial umami four loko master cleanse drinking vinegar brunch. <a href="https://www.pinterest.com" rel="external nofollow noopener" target="_blank">Pinterest</a> DIY authentic Schlitz, hoodie Intelligentsia butcher trust fund brunch shabby chic Kickstarter forage flexitarian. Direct trade <a href="https://en.wikipedia.org/wiki/Cold-pressed_juice" rel="external nofollow noopener" target="_blank">cold-pressed</a> meggings stumptown plaid, pop-up taxidermy. Hoodie XOXO fingerstache scenester Echo Park. Plaid ugh Wes Anderson, freegan pug selvage fanny pack leggings pickled food truck DIY irony Banksy.</p>
-
-<h4 id="hipster-list">Hipster list</h4>
+<p>However, the main meat of the class came in developing out PintOS, an educational Linux-like x86 OS built in C. We started with an existing OS with some bare-bones bootstrap code. Throughout 3 projects and in a team of 4, we implemented major components of the OS, such as:</p>
 <ul>
-    <li>brunch</li>
-    <li>fixie</li>
-    <li>raybans</li>
-    <li>messenger bag</li>
+  <li>Argument Passing</li>
+  <li>Process Control Syscalls</li>
+  <li>File Operation Syscalls</li>
+  <li>Floating Point Unit Support</li>
+  <li>Efficient (non-busy-waiting) system alarm clock</li>
+  <li>Strict priority scheduling of threads</li>
+  <li>Support for user threads (pthreads)</li>
+  <li>Filesystem block cache in-memory</li>
+  <li>A FFS-based filesystem (inode tree, etc)</li>
+  <li>&amp; Subdirectory support.</li>
 </ul>
 
-<p>Hoodie Thundercats retro, tote bag 8-bit Godard craft beer gastropub. Truffaut Tumblr taxidermy, raw denim Kickstarter sartorial dreamcatcher. Quinoa chambray slow-carb salvia readymade, bicycle rights 90’s yr typewriter selfies letterpress cardigan vegan.</p>
+<p>It was a great experience to work on a major piece of software with a team of 4. Working in an internship environment wasn’t nearly as collaborative as working in this team; much of our code needed to fit into each other with very tight tolerances, and bugs could propagate throughout the codebase. This led me to really understanding how to manage pull requests – in other classes, I could get away with just working on <code class="language-plaintext highlighter-rouge">main</code> the whole time. Furthermore the PintOS experience threw me deep into an existing system, packed with its own quirks, problems, and incredibly smart solutions. Learning all of the codebase to the level necessary to build out these features was an incredible experience, and has definitely impacted the speed at which I understand other large codebases.</p>
 
-<hr>
+          </article>
 
-<p>Pug heirloom High Life vinyl swag, single-origin coffee four dollar toast taxidermy reprehenderit fap distillery master cleanse locavore. Est anim sapiente leggings Brooklyn ea. Thundercats locavore excepteur veniam eiusmod. Raw denim Truffaut Schlitz, migas sapiente Portland VHS twee Bushwick Marfa typewriter retro id keytar.</p>
-
-<blockquote>
-  <p>We do not grow absolutely, chronologically. We grow sometimes in one dimension, and not in another, unevenly. We grow partially. We are relative. We are mature in one realm, childish in another.
-—Anais Nin</p>
-</blockquote>
-
-<p>Fap aliqua qui, scenester pug Echo Park polaroid irony shabby chic ex cardigan church-key Odd Future accusamus. Blog stumptown sartorial squid, gastropub duis aesthetic Truffaut vero. Pinterest tilde twee, odio mumblecore jean shorts lumbersexual.</p>
-
-  </article>
-</div>
+        </div>
 
     </div>
 
     <!-- Footer -->    <footer class="sticky-bottom mt-5">
       <div class="container">
         © Copyright 2023 Gaurav  Bhatnagar. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>.
-Last updated: April 24, 2023.
+
       </div>
     </footer>
 
