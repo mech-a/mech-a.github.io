@@ -9,5 +9,6 @@ description: Please click the PDF icon to the right.
 # pdf_file: "GauravBhatnagar.pdf"
 ---
 
-Please see the button above.
+Please see the button above. Last updated in Summer 2023 - for updated versions, please reach out to me via the email on the home page.
+
 <!-- {% pdf  {{ page.cv_pdf | prepend: '/assets/pdf/' | prepend: site.baseurl }} no_link %} -->
